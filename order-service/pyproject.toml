@@ -1,0 +1,18 @@
+[project]
+name = "order-service"
+version = "0.1.0"
+description = "Order microservice for the Online Order Processing System"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "sqlalchemy[asyncio]>=2.0.0",
+    "asyncpg>=0.29.0",
+    "aio-pika>=9.4.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

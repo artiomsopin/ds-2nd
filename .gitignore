@@ -1,0 +1,23 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Poetry
+poetry.lock
+
+# Docker volumes (local overrides)
+*.override.yml
+
+# IDE
+.idea/
+.vscode/
+*.swp

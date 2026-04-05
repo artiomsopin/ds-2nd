@@ -1,0 +1,24 @@
+[project]
+name = "ds-nd2"
+version = "0.1.0"
+description = "Event-Driven Microservices — Distributed Systems Homework #2"
+authors = [
+    {name = "Artiom Sopin",email = "artiomsopin@proton.me"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+# Each microservice lives in its own sub-directory with its own pyproject.toml:
+#   order-service/    → POST /orders  GET /orders/{id}   publishes order.created
+#   payment-service/  → consumes order.created           publishes payment.completed|failed
+#   notification-service/ → consumes payment.*           stores & logs notifications
+#
+# Run the whole stack:  docker compose up --build
+
+[tool.poetry]
+packages = [{include = "ds_nd2", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
