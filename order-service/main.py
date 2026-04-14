@@ -42,14 +42,14 @@ class OrderResponse(BaseModel):
     model_config = {"from_attributes": True}
 
 
-# --- DB dependency ---
+# DB dependency
 
 async def get_db():
     async with SessionLocal() as session:
         yield session
 
 
-# --- App ---
+# App
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
